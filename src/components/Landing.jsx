@@ -13,7 +13,7 @@ function Landing() {
                 </div>
             </div>
         </div>
-        <Playlists/>
+        
     </div>
   )
 }
