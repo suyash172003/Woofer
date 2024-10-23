@@ -12,7 +12,7 @@ function Navbar() {
   
   return (
     <div className='w-full h-screen flex justify-between'>
-      <div className="flex flex-col items-center justify-start navbar w-1/6 h-full bg-slate-50 gap-2 leading-none">
+      <div className="flex flex-col items-center justify-start navbar w-full h-full bg-slate-50 gap-2 leading-none">
          <div className=' h-full w-full logo flex justify-center items-center gap-1 leading-tight'>
            <div className='h-6 w-6 rounded-full bg-cyan-500'></div>
            <div className='text-xl font-bold text-black-700 leading-tight'>Let's</div>
