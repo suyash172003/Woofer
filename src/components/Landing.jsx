@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState,useRef } from 'react'
 import Playlists from './Playlists'
 import Music from "../assets/Music.png"
 import { AiFillHeart, AiFillPayCircle, AiFillPlayCircle, AiFillStar } from 'react-icons/ai'
 import { FiActivity, FiMinus } from 'react-icons/fi'
 
 function Landing() {
+  const audioRef=useRef(null);
+
+  const handlePlayAudio=()=>{
+    const audioElement=audioRef.current
+    if (audioElement) { 
+    audioElement.src="https://p.scdn.co/mp3-preview/541e4aaccc03318918dabf72f93e02bca7dfedcc?cid=d70d86f359464fa7813434cedffcc29e";
+    audioElement.play();
+    }
+  };
+  
   return (
+    
     <div className='-mt-24 h-full w-full px-4'>
         <div className='h-3/4 w-full flex flex-row'>
           <div className='flex flex-col gap-3'>
@@ -100,7 +111,7 @@ function Landing() {
             </div>
             </div>
             </div>
-          
+            
             <img src={Music} alt="Music Icon" className="-mr-1/3 h-full w-1/3  z-10" /></div>
           </div>
           </div>
@@ -136,19 +147,28 @@ function Landing() {
                   <img src={Music} alt="Music Icon" className="h-full w-1/4 z-10" />
                   <h1 className='text'>Arjit Singh</h1>
                   <AiFillHeart className='text-red-600 text-2xl'/>
-                  <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  <button onClick={handlePlayAudio}>
+                    <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  </button>
+                  <audio ref={audioRef}></audio>
                 </div>
                 <div className='bg-slate-50 p-3 rounded-2xl border w-4/5 h-1/5 flex flex-row items-center justify-between'>
                   <img src={Music} alt="Music Icon" className="h-full w-1/4 z-10" />
                   <h1 className='text'>Arjit Singh</h1>
                   <AiFillHeart className='text-red-600 text-2xl'/>
-                  <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  <button onClick={handlePlayAudio}>
+                    <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  </button>
+                  <audio ref={audioRef}></audio>
                 </div>
                 <div className='bg-slate-50 p-3 rounded-2xl border w-4/5 h-1/5 flex flex-row items-center justify-between'>
                   <img src={Music} alt="Music Icon" className="h-full w-1/4 z-10" />
                   <h1 className='text'>Arjit Singh</h1>
                   <AiFillHeart className='text-red-600 text-2xl'/>
-                  <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  <button onClick={handlePlayAudio}>
+                    <AiFillPlayCircle className='text-fuchsia-500 text-2xl'></AiFillPlayCircle>
+                  </button>
+                  <audio ref={audioRef}></audio>
                 </div>
               </div>
           </div>

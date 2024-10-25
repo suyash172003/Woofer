@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Search from './Search'
-function Playlists() {
+
+function Genres() {
   return (
     <div className='flex flex-row h-screen w-screen overflow-hidden'>
         <div className='w-1/6 h-screen'>
@@ -12,11 +13,11 @@ function Playlists() {
                 <Search/>
             </div>
             <div className='w-full h-full'>
-                
+               
             </div>
         </div>
     </div>
   )
 }
 
-export default Playlists
+export default Genres

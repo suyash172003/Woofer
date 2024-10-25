@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Search from './Search'
-function Playlists() {
+
+
+function Albums() {
   return (
     <div className='flex flex-row h-screen w-screen overflow-hidden'>
         <div className='w-1/6 h-screen'>
@@ -19,4 +21,4 @@ function Playlists() {
   )
 }
 
-export default Playlists
+export default Albums
