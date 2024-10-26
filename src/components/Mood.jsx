@@ -4,14 +4,13 @@ import Search from './Search'
 import { AiFillStar,AiFillPlayCircle } from 'react-icons/ai'
 import Music from '../assets/Music.png'
 import { useNavigate } from 'react-router-dom'
-import { motion } from "framer-motion"
-
+import {motion} from "framer-motion"
 function Artists() {
   const[keyword,setKeyword]=useState("")
   const navigate=useNavigate();
 
   return (
-    <div className='flex flex-row h-screen w-screen'>
+    <div className='flex flex-row h-screen w-screen overflow-hidden'>
         <div className='w-1/6 h-screen fixed'>
           <Navbar/>
         </div>
@@ -21,7 +20,7 @@ function Artists() {
             </div>
             <div className='-mt-20 w-full h-full'>
                <div className='ms-10 h-full w-full flex flex-wrap gap-8'>
-                  {["Diljit Dosanjh","Arjit","Karan Aujla","Jubin Nautiyal","Atif Aslam","Shreya Goshal","Ankit Tiwari","Sonu Nigam","Sukhwinder Singh"].map((element,index)=>(
+                  {["Party Hits","Romantic Songs","Chill Vibes","Workout Beats","Sad Songs","Rainy Day"].map((element,index)=>(
                     <div key={index} onClick={()=>{
                       setKeyword(element)
                       navigate("/songs",{state:{keyword:element}});
