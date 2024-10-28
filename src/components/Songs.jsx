@@ -10,7 +10,6 @@ function Songs() {
   const location=useLocation()
   const audioRef = useRef(null)
   const keyword=location.state.keyword
-  
   const handlePlayAudio=(id,preview_url)=>{
     if (playing === id) {
       audioRef.current.pause();

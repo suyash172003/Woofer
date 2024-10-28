@@ -36,7 +36,7 @@ function Landing() {
       audioSrc: "https://p.scdn.co/mp3-preview/74556daea80817d8e2c167adc1d69ad030090846?cid=d70d86f359464fa7813434cedffcc29e"
     },
     {
-      title: "O Maahi",
+      title: "O Maahi - Dunki",
       image: "https://i.scdn.co/image/ab67616d0000b273ab1e3b16de1c7ec009880e97",
       audioSrc: "https://p.scdn.co/mp3-preview/e0e74d21c75bb154407b8365e8df62f656a534d6?cid=d70d86f359464fa7813434cedffcc29e"
     }
@@ -170,10 +170,10 @@ function Landing() {
             <div className='flex flex-col gap-5 ms-8 cards w-full'>
             
       {tracks.map((track, index) => (
-        <div key={index} className='bg-slate-50 p-3 rounded-2xl border w-4/5 h-1/5 flex flex-row items-center justify-between'>
+        <div key={index} className='bg-slate-50 p-3 rounded-2xl border w-4/5 h-1/5 flex flex-row gap-2 items-center justify-between'>
           <img src={track.image} alt="Music Icon" className="h-full w-1/4 z-10" />
           <h1 className='text'>{track.title}</h1>
-          <AiFillHeart className='text-red-600 text-2xl' />
+          <AiFillHeart className='text-red-600 text-xl' />
           <button onClick={() => handlePlayAudio(index)}>
             {playingTracks[index] ? (
               <AiFillPauseCircle className='text-fuchsia-500 text-2xl' />

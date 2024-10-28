@@ -1,6 +1,7 @@
 import React from 'react'
 import Music from '../assets/Music.png'
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion'
 import { AiOutlineStepBackward,AiOutlinePlayCircle,AiOutlineHeart,AiOutlineStepForward, AiFillHeart, AiFillPlayCircle, AiOutlineForward, AiFillFastForward, AiFillBackward, AiFillFastBackward, AiOutlineReconciliation, AiOutlineReload, AiFillHome, AiFillFolder  } from "react-icons/ai";
 
 const logos=[AiFillHome,AiFillHome,AiFillFolder,AiFillHeart,AiFillHeart];
@@ -22,7 +23,7 @@ function Navbar() {
         </div>
 
          <div className="px-20 py-1 h-full w-full flex flex-col justify-center items-center gap-3">
-            <div className='-text-xl font-semibold h-full w-full flex flex-col justify-center items-start text-black space-y-4'>{["Home","Mood","Albums","Artists"].map((items,index)=>(<div key={index} className='flex items-center justify-between gap-4'><AiFillHeart className='text-fuchsia-500'></AiFillHeart><Link to={`/${items.toLowerCase()}`} key={items}>{items}</Link></div>))}</div>
+            <div className='-text-xl font-semibold h-full w-full flex flex-col justify-center items-start text-black space-y-4'>{["Home","Mood","Albums","Artists"].map((items,index)=>(<motion.div whileHover={{scale:1.2}} key={index} className='flex items-center justify-between gap-4'><AiFillHeart className='text-fuchsia-500'></AiFillHeart><Link to={`/${items.toLowerCase()}`} key={items}>{items}</Link></motion.div>))}</div>
          </div>
      
         <div className='h-full w-3/4 mb-3 bg-cyan-500 rounded-3xl'>
